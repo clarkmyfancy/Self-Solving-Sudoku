@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Sudoku
-//
-//  Created by Jack Clark on 5/9/2020.
-//  Copyright © 2020 Jack Conrad Clark. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
