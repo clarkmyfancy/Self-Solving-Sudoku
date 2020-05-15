@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81D75C12469A09B0089BE70 /* SubGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D75BF2469A09B0089BE70 /* SubGridCell.swift */; };
+		D81D75C22469A09B0089BE70 /* SubGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D81D75C02469A09B0089BE70 /* SubGridCell.xib */; };
+		D81D75C8246AF4CA0089BE70 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D75C7246AF4CA0089BE70 /* GridView.swift */; };
+		D8A37CA2246C3ECC0088303E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37CA1246C3ECC0088303E /* Grid.swift */; };
 		D8F263A42467604C00368A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A32467604C00368A78 /* AppDelegate.swift */; };
 		D8F263A62467604C00368A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A52467604C00368A78 /* SceneDelegate.swift */; };
-		D8F263A82467604C00368A78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A72467604C00368A78 /* ViewController.swift */; };
 		D8F263AB2467604C00368A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F263A92467604C00368A78 /* Main.storyboard */; };
 		D8F263AD2467605100368A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F263AC2467605100368A78 /* Assets.xcassets */; };
 		D8F263B02467605100368A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F263AE2467605100368A78 /* LaunchScreen.storyboard */; };
 		D8F263BB2467605200368A78 /* SudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263BA2467605200368A78 /* SudokuTests.swift */; };
+		D8F263C924677CC900368A78 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263C824677CC800368A78 /* HomeViewController.swift */; };
+		D8F263CB24677D4800368A78 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263CA24677D4800368A78 /* PlayViewController.swift */; };
+		D8F263DD2468981000368A78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263DC2468980F00368A78 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D81D75BF2469A09B0089BE70 /* SubGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubGridCell.swift; sourceTree = "<group>"; };
+		D81D75C02469A09B0089BE70 /* SubGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubGridCell.xib; sourceTree = "<group>"; };
+		D81D75C7246AF4CA0089BE70 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		D8A37CA1246C3ECC0088303E /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		D8F263A02467604C00368A78 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F263A32467604C00368A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8F263A52467604C00368A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8F263A72467604C00368A78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8F263AA2467604C00368A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8F263AC2467605100368A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8F263AF2467605100368A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +47,9 @@
 		D8F263B62467605200368A78 /* SudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F263BA2467605200368A78 /* SudokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuTests.swift; sourceTree = "<group>"; };
 		D8F263BC2467605200368A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F263C824677CC800368A78 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../../../../ios/Sudoku/Sudoku/Controller/HomeViewController.swift; sourceTree = "<group>"; };
+		D8F263CA24677D4800368A78 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayViewController.swift; path = ../../../../ios/Sudoku/Sudoku/Controller/PlayViewController.swift; sourceTree = "<group>"; };
+		D8F263DC2468980F00368A78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../ios/Sudoku/Sudoku/Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +93,11 @@
 			children = (
 				D8F263A32467604C00368A78 /* AppDelegate.swift */,
 				D8F263A52467604C00368A78 /* SceneDelegate.swift */,
-				D8F263A72467604C00368A78 /* ViewController.swift */,
-				D8F263A92467604C00368A78 /* Main.storyboard */,
+				D8F263DC2468980F00368A78 /* Constants.swift */,
+				D8F263C524676E6E00368A78 /* Model */,
+				D8F263C624676E7A00368A78 /* View */,
+				D8F263C724676E8700368A78 /* Controller */,
 				D8F263AC2467605100368A78 /* Assets.xcassets */,
-				D8F263AE2467605100368A78 /* LaunchScreen.storyboard */,
 				D8F263B12467605100368A78 /* Info.plist */,
 			);
 			path = Sudoku;
@@ -97,6 +110,35 @@
 				D8F263BC2467605200368A78 /* Info.plist */,
 			);
 			path = SudokuTests;
+			sourceTree = "<group>";
+		};
+		D8F263C524676E6E00368A78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8A37CA1246C3ECC0088303E /* Grid.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8F263C624676E7A00368A78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8F263A92467604C00368A78 /* Main.storyboard */,
+				D8F263AE2467605100368A78 /* LaunchScreen.storyboard */,
+				D81D75BF2469A09B0089BE70 /* SubGridCell.swift */,
+				D81D75C02469A09B0089BE70 /* SubGridCell.xib */,
+				D81D75C7246AF4CA0089BE70 /* GridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8F263C724676E8700368A78 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8F263C824677CC800368A78 /* HomeViewController.swift */,
+				D8F263CA24677D4800368A78 /* PlayViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81D75C22469A09B0089BE70 /* SubGridCell.xib in Resources */,
 				D8F263B02467605100368A78 /* LaunchScreen.storyboard in Resources */,
 				D8F263AD2467605100368A78 /* Assets.xcassets in Resources */,
 				D8F263AB2467604C00368A78 /* Main.storyboard in Resources */,
@@ -200,9 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F263A82467604C00368A78 /* ViewController.swift in Sources */,
+				D81D75C12469A09B0089BE70 /* SubGridCell.swift in Sources */,
+				D8F263CB24677D4800368A78 /* PlayViewController.swift in Sources */,
+				D8F263DD2468981000368A78 /* Constants.swift in Sources */,
+				D8A37CA2246C3ECC0088303E /* Grid.swift in Sources */,
 				D8F263A42467604C00368A78 /* AppDelegate.swift in Sources */,
+				D81D75C8246AF4CA0089BE70 /* GridView.swift in Sources */,
 				D8F263A62467604C00368A78 /* SceneDelegate.swift in Sources */,
+				D8F263C924677CC900368A78 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
