@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-@IBDesignable class GridView: UIView {
+@IBDesignable class BorderAndPartitionLinesUI: UIView {
   
     let grid = Grid()
     
@@ -9,14 +9,12 @@ import Foundation
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(CGColor(srgbRed: 0.4, green: 0.0, blue: 0.0, alpha: 1.0))
             context.setLineWidth(1.0)
-            drawGridUI(with: context, having: self.bounds.size.width, and: self.bounds.size.height)
-        }
-    }
+            drawGridUI(with: context, having: Dimensions(self.bounds.size.width,self.bounds.size.height))}}
             
-    func drawGridUI(with context: CGContext, having width: CGFloat, and height: CGFloat) {
-        drawBorder(with: context, having: width, and: height)
-        drawGridPartitions(with: context, having: width, and: height)
-        drawCellPartitions(with: context, having: width, and: height)}
+    func drawGridUI(with context: CGContext, having dimension: Dimensions) {
+        drawBorder(with: context, having: dimension.width, and: dimension.height)
+        drawGridPartitions(with: context, having: dimension.width, and: dimension.height)
+        drawCellPartitions(with: context, having: dimension.width, and: dimension.height)}
         
     func drawBorder(with context: CGContext, having width: CGFloat, and height: CGFloat) {
         let path = UIBezierPath(rect: CGRect(x: 1, y: 1, width: width-2.0, height: height-2.0))
@@ -53,10 +51,7 @@ import Foundation
                 let startingPoint = grid.subGridBorderWidth + (CGFloat(I - 1) * CGFloat(gridWidth + grid.subGridBorderWidth)) + ((CGFloat(i) * (cellWidth)) + (CGFloat(i - 1) * grid.cellBorderWidth))
                 let path = UIBezierPath(rect: CGRect(x: startingPoint, y: 0, width: 0.0, height: height))
                 path.lineWidth = grid.cellBorderWidth / 2
-                path.stroke()
-            }
-        }
-    }
+                path.stroke()}}}
     
     func drawHorizontalCellPartitions(with context: CGContext, having width: CGFloat, and height: CGFloat) {
         let gridWidth = (width - 4.0*grid.subGridBorderWidth) / 3.0
@@ -66,8 +61,5 @@ import Foundation
                 let startingPoint = grid.subGridBorderWidth + (CGFloat(J - 1) * CGFloat(gridWidth + grid.subGridBorderWidth)) + ((CGFloat(j) * (cellWidth)) + (CGFloat(j - 1) * grid.cellBorderWidth))
                 let path = UIBezierPath(rect: CGRect(x: 0, y: startingPoint, width: width, height: 0.0))
                 path.lineWidth = grid.cellBorderWidth / 2
-                path.stroke()
-            }
-        }
-    }
+                path.stroke()}}}
 }
