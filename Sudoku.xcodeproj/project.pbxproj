@@ -12,7 +12,11 @@
 		D81D75C8246AF4CA0089BE70 /* BorderAndPartitionLinesUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81D75C7246AF4CA0089BE70 /* BorderAndPartitionLinesUI.swift */; };
 		D854D966246E4E07004E839E /* SudokuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854D965246E4E07004E839E /* SudokuManager.swift */; };
 		D854D968246ED6DE004E839E /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854D967246ED6DE004E839E /* Dimensions.swift */; };
+		D85B0DA0247A23AD00DBA200 /* BenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0D9F247A23AD00DBA200 /* BenchTimer.swift */; };
+		D85B0DA3247A321E00DBA200 /* PuzzleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0DA2247A321E00DBA200 /* PuzzleProvider.swift */; };
+		D85B0DA5247A3C4500DBA200 /* PuzzleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B0DA4247A3C4500DBA200 /* PuzzleModel.swift */; };
 		D8A37CA2246C3ECC0088303E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37CA1246C3ECC0088303E /* Grid.swift */; };
+		D8CA2162247A4590002B8A39 /* GameSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA2161247A4590002B8A39 /* GameSetupController.swift */; };
 		D8F263A42467604C00368A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A32467604C00368A78 /* AppDelegate.swift */; };
 		D8F263A62467604C00368A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A52467604C00368A78 /* SceneDelegate.swift */; };
 		D8F263AB2467604C00368A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F263A92467604C00368A78 /* Main.storyboard */; };
@@ -41,7 +45,11 @@
 		D82F56462471E3C200C1E6B0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D854D965246E4E07004E839E /* SudokuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuManager.swift; sourceTree = "<group>"; };
 		D854D967246ED6DE004E839E /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		D85B0D9F247A23AD00DBA200 /* BenchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchTimer.swift; sourceTree = "<group>"; };
+		D85B0DA2247A321E00DBA200 /* PuzzleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleProvider.swift; sourceTree = "<group>"; };
+		D85B0DA4247A3C4500DBA200 /* PuzzleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleModel.swift; sourceTree = "<group>"; };
 		D8A37CA1246C3ECC0088303E /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		D8CA2161247A4590002B8A39 /* GameSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupController.swift; sourceTree = "<group>"; };
 		D8F263A02467604C00368A78 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F263A32467604C00368A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8F263A52467604C00368A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +83,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80914142482CF6500D10367 /* BordersAndCellPartitionsUI */ = {
+			isa = PBXGroup;
+			children = (
+				D8A37CA1246C3ECC0088303E /* Grid.swift */,
+				D854D967246ED6DE004E839E /* Dimensions.swift */,
+				D81D75C7246AF4CA0089BE70 /* BorderAndPartitionLinesUI.swift */,
+			);
+			path = BordersAndCellPartitionsUI;
+			sourceTree = "<group>";
+		};
+		D845F4DE24809FA1008798EB /* PuzzleProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D85B0DA2247A321E00DBA200 /* PuzzleProvider.swift */,
+			);
+			path = PuzzleProvider;
+			sourceTree = "<group>";
+		};
+		D85441A5247A176C0070DEEC /* SubGridCell */ = {
+			isa = PBXGroup;
+			children = (
+				D81D75BF2469A09B0089BE70 /* SubGridCell.swift */,
+				D81D75C02469A09B0089BE70 /* SubGridCell.xib */,
+			);
+			path = SubGridCell;
+			sourceTree = "<group>";
+		};
+		D85B0DA1247A31EE00DBA200 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D845F4DE24809FA1008798EB /* PuzzleProvider */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D8F263972467604C00368A78 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +143,7 @@
 				D8F263A32467604C00368A78 /* AppDelegate.swift */,
 				D8F263A52467604C00368A78 /* SceneDelegate.swift */,
 				D8F263DC2468980F00368A78 /* Constants.swift */,
+				D85B0DA1247A31EE00DBA200 /* Services */,
 				D8F263C524676E6E00368A78 /* Model */,
 				D8F263C624676E7A00368A78 /* View */,
 				D8F263C724676E8700368A78 /* Controller */,
@@ -121,9 +165,9 @@
 		D8F263C524676E6E00368A78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8A37CA1246C3ECC0088303E /* Grid.swift */,
 				D854D965246E4E07004E839E /* SudokuManager.swift */,
-				D854D967246ED6DE004E839E /* Dimensions.swift */,
+				D85B0D9F247A23AD00DBA200 /* BenchTimer.swift */,
+				D85B0DA4247A3C4500DBA200 /* PuzzleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,9 +177,8 @@
 			children = (
 				D8F263A92467604C00368A78 /* Main.storyboard */,
 				D8F263AE2467605100368A78 /* LaunchScreen.storyboard */,
-				D81D75BF2469A09B0089BE70 /* SubGridCell.swift */,
-				D81D75C02469A09B0089BE70 /* SubGridCell.xib */,
-				D81D75C7246AF4CA0089BE70 /* BorderAndPartitionLinesUI.swift */,
+				D80914142482CF6500D10367 /* BordersAndCellPartitionsUI */,
+				D85441A5247A176C0070DEEC /* SubGridCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F263C824677CC800368A78 /* HomeViewController.swift */,
+				D8CA2161247A4590002B8A39 /* GameSetupController.swift */,
 				D8F263CA24677D4800368A78 /* PlayViewController.swift */,
 			);
 			path = Controller;
@@ -253,10 +297,14 @@
 			files = (
 				D854D966246E4E07004E839E /* SudokuManager.swift in Sources */,
 				D81D75C12469A09B0089BE70 /* SubGridCell.swift in Sources */,
+				D85B0DA3247A321E00DBA200 /* PuzzleProvider.swift in Sources */,
+				D8CA2162247A4590002B8A39 /* GameSetupController.swift in Sources */,
 				D8F263CB24677D4800368A78 /* PlayViewController.swift in Sources */,
+				D85B0DA0247A23AD00DBA200 /* BenchTimer.swift in Sources */,
 				D8F263DD2468981000368A78 /* Constants.swift in Sources */,
 				D8A37CA2246C3ECC0088303E /* Grid.swift in Sources */,
 				D8F263A42467604C00368A78 /* AppDelegate.swift in Sources */,
+				D85B0DA5247A3C4500DBA200 /* PuzzleModel.swift in Sources */,
 				D81D75C8246AF4CA0089BE70 /* BorderAndPartitionLinesUI.swift in Sources */,
 				D8F263A62467604C00368A78 /* SceneDelegate.swift in Sources */,
 				D854D968246ED6DE004E839E /* Dimensions.swift in Sources */,
