@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ouj-0h-R02">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4d-cb-yBY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +42,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <state key="normal" title="Play"/>
                                                 <connections>
-                                                    <segue destination="O4d-cb-yBY" kind="show" identifier="GoToPlay" id="WI5-pS-8qP"/>
+                                                    <segue destination="zbt-bC-c3h" kind="show" id="mDt-ch-pRQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -74,6 +74,41 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
+        <!--GameSetupController-->
+        <scene sceneID="MXP-MQ-wd8">
+            <objects>
+                <viewController title="GameSetupController" id="zbt-bC-c3h" customClass="GameSetupController" customModule="Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Da3-2h-182">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-nP-dsV">
+                                <rect key="frame" x="73" y="144" width="269" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBL-hp-HlY">
+                                <rect key="frame" x="157" y="645" width="103" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onPressedStart:" destination="zbt-bC-c3h" eventType="touchUpInside" id="Pk6-Wc-fjm"/>
+                                    <segue destination="O4d-cb-yBY" kind="show" id="8HL-zQ-jK4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="wX2-ik-jf5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WK4-CB-T4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWV-sB-7i1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="130"/>
+        </scene>
         <!--Play View Controller-->
         <scene sceneID="Eqb-IC-r6R">
             <objects>
@@ -82,9 +117,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-tD-dgD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlw-qX-CxD">
+                                <rect key="frame" x="20" y="168" width="127" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZJ-cz-qMb">
+                                        <rect key="frame" x="29" y="9.5" width="69" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VZJ-cz-qMb" firstAttribute="centerY" secondItem="nlw-qX-CxD" secondAttribute="centerY" id="MzC-qZ-g15"/>
+                                    <constraint firstItem="VZJ-cz-qMb" firstAttribute="centerX" secondItem="nlw-qX-CxD" secondAttribute="centerX" id="pha-Wc-Jyf"/>
+                                </constraints>
+                            </view>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-tD-dgD">
                                 <rect key="frame" x="20" y="261" width="374" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="elX-jh-nHF">
                                     <size key="itemSize" width="115" height="117"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -102,93 +152,102 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hCP-Da-uNu">
-                                <rect key="frame" x="0.0" y="726" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="714" width="414" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmE-JO-Hnc">
-                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="VtN-Hf-fHf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwc-1x-UlQ">
-                                        <rect key="frame" x="47.5" y="0.0" width="33" height="30"/>
+                                        <rect key="frame" x="47.5" y="0.0" width="33" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="5kQ-EI-88N"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqG-DO-rAQ">
-                                        <rect key="frame" x="95.5" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="95.5" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="zLu-Dd-dbx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaE-Xb-G6i">
-                                        <rect key="frame" x="143" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="143" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="X5V-Nz-7Ci"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-lK-hvF">
-                                        <rect key="frame" x="190.5" y="0.0" width="33" height="30"/>
+                                        <rect key="frame" x="190.5" y="0.0" width="33" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="wdm-NX-sgp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUV-kJ-4mS">
-                                        <rect key="frame" x="238.5" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="238.5" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="taY-fg-sdf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-rt-3yD">
-                                        <rect key="frame" x="286" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="286" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="UYo-nK-Bke"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYG-MS-TdO">
-                                        <rect key="frame" x="333.5" y="0.0" width="33" height="30"/>
+                                        <rect key="frame" x="333.5" y="0.0" width="33" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="6m4-GO-3hH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iue-kr-cnK">
-                                        <rect key="frame" x="381.5" y="0.0" width="32.5" height="30"/>
+                                        <rect key="frame" x="381.5" y="0.0" width="32.5" height="42"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPressedNumber:" destination="O4d-cb-yBY" eventType="touchUpInside" id="daL-zf-V6t"/>
@@ -199,21 +258,39 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nlw-qX-CxD" secondAttribute="bottom" constant="679" id="3IY-PR-YqL"/>
                             <constraint firstItem="hCP-Da-uNu" firstAttribute="trailing" secondItem="QSt-LR-WN3" secondAttribute="trailing" id="54J-J4-WfO"/>
+                            <constraint firstItem="1z1-tD-dgD" firstAttribute="centerY" secondItem="qW6-fb-hq7" secondAttribute="centerY" id="It6-oZ-fnm"/>
+                            <constraint firstItem="1z1-tD-dgD" firstAttribute="centerX" secondItem="hCP-Da-uNu" secondAttribute="centerX" id="N6J-Rd-UFT"/>
                             <constraint firstItem="hCP-Da-uNu" firstAttribute="leading" secondItem="QSt-LR-WN3" secondAttribute="leading" id="NYJ-SF-ss2"/>
+                            <constraint firstItem="nlw-qX-CxD" firstAttribute="top" secondItem="QSt-LR-WN3" secondAttribute="top" constant="80" id="W9G-bG-4Tq"/>
+                            <constraint firstItem="nlw-qX-CxD" firstAttribute="leading" secondItem="QSt-LR-WN3" secondAttribute="leading" constant="20" id="WC6-qV-PHg"/>
+                            <constraint firstItem="nlw-qX-CxD" firstAttribute="leading" secondItem="1z1-tD-dgD" secondAttribute="leading" id="ZIf-fq-CfZ"/>
+                            <constraint firstItem="QSt-LR-WN3" firstAttribute="trailing" secondItem="nlw-qX-CxD" secondAttribute="trailing" constant="267" id="jlk-a8-P7d"/>
                             <constraint firstItem="QSt-LR-WN3" firstAttribute="bottom" secondItem="hCP-Da-uNu" secondAttribute="bottom" constant="106" id="kpx-zK-wme"/>
+                            <constraint firstItem="1z1-tD-dgD" firstAttribute="top" secondItem="nlw-qX-CxD" secondAttribute="bottom" constant="44" id="ofX-g2-r4Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QSt-LR-WN3"/>
                     </view>
                     <navigationItem key="navigationItem" id="N5n-cm-seW"/>
                     <connections>
                         <outlet property="borderAndOutlines" destination="Mr9-8L-JTt" id="4A0-Pt-K7d"/>
+                        <outlet property="eightButton" destination="pYG-MS-TdO" id="6dx-Wa-ZV7"/>
+                        <outlet property="elapsedTimeLabel" destination="VZJ-cz-qMb" id="UCb-TJ-n7u"/>
+                        <outlet property="fiveButton" destination="XWN-lK-hvF" id="CM6-bb-0jy"/>
+                        <outlet property="fourButton" destination="RaE-Xb-G6i" id="Unj-sq-PqR"/>
+                        <outlet property="nineButton" destination="iue-kr-cnK" id="U7f-Pl-e8j"/>
+                        <outlet property="oneButton" destination="MmE-JO-Hnc" id="k18-Mx-7Ja"/>
                         <outlet property="puzzleWithNumbersView" destination="1z1-tD-dgD" id="IoH-OU-Q3N"/>
+                        <outlet property="sevenButton" destination="mN6-rt-3yD" id="FNQ-dl-1bR"/>
+                        <outlet property="sixButton" destination="wUV-kJ-4mS" id="yBj-5r-NLU"/>
+                        <outlet property="threeButton" destination="zqG-DO-rAQ" id="nwm-5z-8Gl"/>
+                        <outlet property="twoButton" destination="Dwc-1x-UlQ" id="D2q-KU-G4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Tc-RY-XRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1953.6231884057972" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3062" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v2S-4E-wM2">
