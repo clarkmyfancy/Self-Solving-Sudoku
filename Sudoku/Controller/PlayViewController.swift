@@ -8,7 +8,7 @@ class PlayViewController: UIViewController {
     //    var timer = Timer()
     elapsedTimeLabel: UILabel!
     
-    var sudokuManager = SudokuManager()
+//    var sudokuManager = SudokuManager()
     
     @IBOutlet weak var borderAndOutlines: UIView!
     @IBOutlet weak var puzzleWithNumbersView: UICollectionView!
@@ -38,7 +38,7 @@ class PlayViewController: UIViewController {
 //        timer = Timer.scheduledTimer(withTimeInterval: 0.0, repeats: true, block: { _ in
 //            self.elapsedTimeLabel.text = String(format: "%.2f", self.sudokuManager.getElapsedTime())})}
     func loadPuzzle() {
-        sudokuManager.loadPuzzle()
+//        sudokuManager.loadPuzzle()
     }
     
     func initSudokuPuzzleCollectionView() {
@@ -104,16 +104,18 @@ extension PlayViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.subGridReuseIdentifier, for: indexPath) as! SubGridCell
         let row: Int = indexPath[1] / 9
         let col: Int = indexPath[1] % 9
-        if noNumberGiven(for: row, and: col) {
-            cell.cellValueLabel.text = " "}
-        else {
-            cell.cellValueLabel.text = String(sudokuManager.getNumberUsingCoordinates(row, col))}
+//        if noNumberGiven(for: row, and: col) {
+            cell.cellValueLabel.text = " "
         return cell
+//    }
+//        else {
+//            cell.cellValueLabel.text = String(sudokuManager.getNumberUsingCoordinates(row, col))}
+//        return cell
     }
     
-    func noNumberGiven(for row: Int, and col: Int) -> Bool {
-        return sudokuManager.getNumberUsingCoordinates(row, col) == 0
-    }
+//    func noNumberGiven(for row: Int, and col: Int) -> Bool {
+//        return sudokuManager.getNumberUsingCoordinates(row, col) == 0
+//    }
 }
 
 //MARK: - UICollectionView Delegate
@@ -123,15 +125,15 @@ extension PlayViewController: UICollectionViewDelegate {
         let cell = collectionView.cellForItem(at: indexPath) as! SubGridCell
         let row = indexPath[1] / 9
         let col = indexPath[1] % 9
-        if cellIsEditableAtLocation(x: row, y: col) {
-            sudokuManager.updateCellAtLocationWithNumber(x: row, y: col, selectedNumber)
-        }
+//        if cellIsEditableAtLocation(x: row, y: col) {
+//            sudokuManager.updateCellAtLocationWithNumber(x: row, y: col, selectedNumber)
+//        }
         collectionView.reloadData()
     }
     
-    func cellIsEditableAtLocation(x row: Int, y col: Int) -> Bool {
-        return sudokuManager.determineWhetherNumberWasGivenUsingCoordinates(row, col)
-    }
+//    func cellIsEditableAtLocation(x row: Int, y col: Int) -> Bool {
+//        return sudokuManager.determineWhetherNumberWasGivenUsingCoordinates(row, col)
+//    }
 }
 
 
