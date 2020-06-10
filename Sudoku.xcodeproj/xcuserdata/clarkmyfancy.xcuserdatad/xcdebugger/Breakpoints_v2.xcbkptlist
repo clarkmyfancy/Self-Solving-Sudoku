@@ -46,10 +46,10 @@
             filePath = "Sudoku/Controller/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,10 +78,74 @@
             filePath = "Sudoku/Controller/PlayViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EE3323D-365A-4AB8-844B-9B70FA75D17D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SudokuTests/PuzzleProviderTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SudokuTests/PuzzleTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "testWhenAskedForRowOutsideBounds_throwsOutOfBoundsException()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - fc14eacb1d7eb1f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SudokuTests.PuzzleTest.testWhenAskedForRowOutsideBounds_throwsOutOfBoundsException() throws -&gt; ()"
+                  moduleName = "SudokuTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clarkmyfancy/Desktop/stuffIMake/software/ios/Sudoku/SudokuTests/PuzzleTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - 9ca815e2efa8c561"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Error) -&gt; () in SudokuTests.PuzzleTest.testWhenAskedForRowOutsideBounds_throwsOutOfBoundsException() throws -&gt; ()"
+                  moduleName = "SudokuTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clarkmyfancy/Desktop/stuffIMake/software/ios/Sudoku/SudokuTests/PuzzleTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

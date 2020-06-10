@@ -37,6 +37,11 @@
                BlueprintName = "SudokuTests"
                ReferencedContainer = "container:Sudoku.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TestPuzzleProvider">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
