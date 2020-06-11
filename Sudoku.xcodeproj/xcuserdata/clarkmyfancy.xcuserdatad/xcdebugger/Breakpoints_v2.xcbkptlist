@@ -110,10 +110,10 @@
             filePath = "SudokuTests/PuzzleTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "testWhenAskedForRowOutsideBounds_throwsOutOfBoundsException()"
-            landmarkType = "7">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "PuzzleTest"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - fc14eacb1d7eb1f0"
