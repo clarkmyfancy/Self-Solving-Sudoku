@@ -18,6 +18,8 @@
 		D89266BF249081DC005C54A1 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89266BE249081DC005C54A1 /* Puzzle.swift */; };
 		D89266C12490895E005C54A1 /* PuzzleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89266C02490895E005C54A1 /* PuzzleTest.swift */; };
 		D8A37CA2246C3ECC0088303E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A37CA1246C3ECC0088303E /* Grid.swift */; };
+		D8B582FE2491C33E00375FD3 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B582FD2491C33E00375FD3 /* Generator.swift */; };
+		D8B583002491C39C00375FD3 /* PuzzleGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B582FF2491C39C00375FD3 /* PuzzleGeneratorTest.swift */; };
 		D8CA2162247A4590002B8A39 /* GameSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA2161247A4590002B8A39 /* GameSetupController.swift */; };
 		D8F263A42467604C00368A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A32467604C00368A78 /* AppDelegate.swift */; };
 		D8F263A62467604C00368A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F263A52467604C00368A78 /* SceneDelegate.swift */; };
@@ -52,6 +54,8 @@
 		D89266BE249081DC005C54A1 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		D89266C02490895E005C54A1 /* PuzzleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleTest.swift; sourceTree = "<group>"; };
 		D8A37CA1246C3ECC0088303E /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		D8B582FD2491C33E00375FD3 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		D8B582FF2491C39C00375FD3 /* PuzzleGeneratorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleGeneratorTest.swift; sourceTree = "<group>"; };
 		D8CA2161247A4590002B8A39 /* GameSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupController.swift; sourceTree = "<group>"; };
 		D8F263A02467604C00368A78 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F263A32467604C00368A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D85B0DA2247A321E00DBA200 /* PuzzleProvider.swift */,
+				D8B582FD2491C33E00375FD3 /* Generator.swift */,
 			);
 			path = Puzzle;
 			sourceTree = "<group>";
@@ -118,6 +123,13 @@
 				D845F4DE24809FA1008798EB /* Puzzle */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D8B5830124926C8A00375FD3 /* Custom Error Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Error Types";
 			sourceTree = "<group>";
 		};
 		D8F263972467604C00368A78 = {
@@ -142,6 +154,7 @@
 		D8F263A22467604C00368A78 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				D8B5830124926C8A00375FD3 /* Custom Error Types */,
 				D8F263A32467604C00368A78 /* AppDelegate.swift */,
 				D8F263A52467604C00368A78 /* SceneDelegate.swift */,
 				D8F263DC2468980F00368A78 /* Constants.swift */,
@@ -161,6 +174,7 @@
 			children = (
 				D89266C02490895E005C54A1 /* PuzzleTest.swift */,
 				D8F263BC2467605200368A78 /* Info.plist */,
+				D8B582FF2491C39C00375FD3 /* PuzzleGeneratorTest.swift */,
 			);
 			path = SudokuTests;
 			sourceTree = "<group>";
@@ -299,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89266BF249081DC005C54A1 /* Puzzle.swift in Sources */,
+				D8B582FE2491C33E00375FD3 /* Generator.swift in Sources */,
 				D854D966246E4E07004E839E /* SudokuManager.swift in Sources */,
 				D81D75C12469A09B0089BE70 /* SubGridCell.swift in Sources */,
 				D85B0DA3247A321E00DBA200 /* PuzzleProvider.swift in Sources */,
@@ -321,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89266C12490895E005C54A1 /* PuzzleTest.swift in Sources */,
+				D8B583002491C39C00375FD3 /* PuzzleGeneratorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +466,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -511,6 +528,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZFXJYGJYS;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = SudokuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,6 +551,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZFXJYGJYS;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = SudokuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
