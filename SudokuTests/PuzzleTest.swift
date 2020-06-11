@@ -78,10 +78,7 @@ class PuzzleTest: XCTestCase {
     func test_WhenAskedForCellAtLocationOverColumnBounds_throwsOutOfBoundsError() throws {
         for i in 0..<target.getRowCount() {
             XCTAssertThrowsError(try target.getCellAt(row: i, col: target.getColumnCount()), "When asked for cell at a location where the column specified is over bounds, did not throw error.") { (e) in
-                print(e.localizedDescription)
-            }
-        }
-    }
+                print(e.localizedDescription)}}}
     
     
     
