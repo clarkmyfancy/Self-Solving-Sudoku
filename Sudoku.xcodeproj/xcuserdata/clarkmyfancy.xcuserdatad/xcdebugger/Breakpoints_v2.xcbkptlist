@@ -116,7 +116,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - fc14eacb1d7eb1f0"
+                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - 984663a3ae81539c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -131,7 +131,7 @@
                   offsetFromSymbolStart = "90">
                </Location>
                <Location
-                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - 9ca815e2efa8c561"
+                  uuid = "6CB2A627-D27C-421C-B437-4EFD83081E17 - f8fa9c8a5c57272c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -160,6 +160,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
             endingLineNumber = "6"
+            landmarkName = "PuzzleGeneratorTest"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B846C90E-A77F-4677-A369-47ACD1AFBA1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SudokuTests/PuzzleGeneratorTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "PuzzleGeneratorTest"
             landmarkType = "3">
          </BreakpointContent>
