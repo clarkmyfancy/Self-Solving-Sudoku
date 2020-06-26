@@ -80,7 +80,9 @@ class PuzzleTest: XCTestCase {
             XCTAssertThrowsError(try target.getCellAt(row: i, col: target.getColumnCount()), "When asked for cell at a location where the column specified is over bounds, did not throw error.") { (e) in
                 print(e.localizedDescription)}}}
     
-    
+    func test_WhenAskedToPrettyPrint_ItIs() throws {
+        let puzzle = try target.prettyPrint()
+    }
     
 }
 
